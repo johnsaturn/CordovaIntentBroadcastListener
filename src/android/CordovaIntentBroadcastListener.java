@@ -16,12 +16,14 @@ import android.os.Bundle;
 public class CordovaIntentBroadcastListener extends CordovaPlugin {
 
 	public static String ACTION="org.apache.cordova.CordovaPlugin.Intent";
+	private static Logger log=Logger.getLogger(CordovaIntentBroadcastListener.class.getName());
 
 	@Override
 	public void onNewIntent(Intent intent) {
 		//Invoke parent..
 		super.onNewIntent(intent);
 
+		log.info("Receiving Intent "+ intent.getAction() + ":" + intent );
 		//Match the Action
 		if(ACTION.equals(intent.getAction())){
 
@@ -38,7 +40,7 @@ public class CordovaIntentBroadcastListener extends CordovaPlugin {
 					try{
 						this.webView.evaluateJavascript(script, null);
 					}catch(Exception ex){
-						Logger.getLogger(this.getClass().getName()).log(Level.WARNING, "Error while processing intent", ex);
+						log.log(Level.WARNING, "Error while processing intent", ex);
 					}
 				}
 
