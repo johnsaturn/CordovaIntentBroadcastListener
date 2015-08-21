@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-           id="com.borismus.webintent"
+           id="com.john_saturn.cordova.plugins.CordovaIntentBroadcastListener"
       version="1.0.0">
     <name>CordovaIntentBroadcastListener</name>
     <description>Listen for Broadcasts an executes them in the WebView</description>
@@ -19,7 +19,7 @@
             </feature>
         </config-file>
 
-        <config-file target="AndroidManifest.xml" parent="/application/activity/*">
+        <config-file target="AndroidManifest.xml" parent="/manifest/application/activity/*">
 			 <intent-filter>
 				 <action android:name="org.apache.cordova.CordovaPlugin.Intent" />
 			 </intent-filter>            
