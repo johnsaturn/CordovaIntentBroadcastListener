@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+           id="com.borismus.webintent"
+      version="1.0.0">
+    <name>CordovaIntentBroadcastListener</name>
+    <description>Listen for Broadcasts an executes them in the WebView</description>
+    <license>MIT</license>
+    <keywords>cordova,intent, broadcast, javascript</keywords>
+
+  
+
+    <!-- android -->
+    <platform name="android">
+	
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CordovaIntentBroadcastListener" >
+                <param name="android-package" value="com.john_saturn.cordova.plugins.CordovaIntentBroadcastListener"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/application/activity/*">
+			 <intent-filter>
+				 <action android:name="org.apache.cordova.CordovaPlugin.Intent" />
+			 </intent-filter>            
+        </config-file>
+		
+        <source-file src="src/android/CordovaIntentBroadcastListener.java" target-dir="src/com/john_saturn/cordova.plugins/" />
+    </platform>
+</plugin>
