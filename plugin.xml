@@ -21,7 +21,7 @@
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity/">
 			 <intent-filter>
-				 <action android:name="org.apache.cordova.CordovaPlugin.Intent" />
+				 <action android:name="org.apache.cordova.CordovaPlugin.Intent" />				
 			 </intent-filter>            
         </config-file>
 		

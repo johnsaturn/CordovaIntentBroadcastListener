@@ -1,12 +1,23 @@
 # Cordova Intent Broadcast Listener #
 By Jose Puertos
 
-This plugin allows to pass javascript to the main webview page from a given intent
+This plugin allows to pass javascript to the main webview page from a org.apache.cordova.CordovaPlugin.Intent Intent.
+
+For example from the ADB Shell one might execute the following:
+
+am broadcast -a org.apache.cordova.CordovaPlugin.Intent --es JS1 "alert(1)" --es JS2 "alert('hello')"
+
+Which would result in the current WebView executing two alerts.
+
+
+
 
 ## Adding the Plugin to your project ##
 1. To install the plugin, use the Cordova CLI and enter the following:
 
 `cordova plugin add https://github.com/johnsaturn/CordovaIntentBroadcastListener.git`
+
+
 
 ## Licence ##
 
